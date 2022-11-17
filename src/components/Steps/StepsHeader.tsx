@@ -15,16 +15,16 @@ function StepsHeader({ status }: StepsHeaderProps) {
         backgroundColor={"blackOpaque"}
         borderRadius={"10px 0 0 10px"}
       >
-        <Icon as={TbTag} />
-        <Text ml={2}>Create</Text>
+        <Icon m={"5px 10px 5px 15px"} as={TbTag} />
+        <Text>Create</Text>
       </Tab>
       <Tab
         _selected={{ color: "white", bg: "primary" }}
         backgroundColor={"blackOpaque"}
         isDisabled={status.indexOf("didCreated") === -1}
       >
-        <Icon as={TbHierarchy} />
-        <Text ml={2}>Resolve</Text>
+        <Icon m={"5px 10px 5px 15px"} as={TbHierarchy} />
+        <Text m={"5px 15px 5px 0"}>Resolve</Text>
       </Tab>
       <Tab
         _selected={{ color: "white", bg: "primary" }}
@@ -33,7 +33,7 @@ function StepsHeader({ status }: StepsHeaderProps) {
         isDisabled={status.indexOf("didResolved") === -1}
       >
         <Icon as={TbSignature} />
-        <Text ml={2}>Sign and Verify Data</Text>
+        <Text m={"5px 15px 5px 10px"}>Sign and Verify Data</Text>
       </Tab>
     </TabList>
   );
