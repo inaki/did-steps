@@ -35,11 +35,11 @@ function StepSign({ didResolution, privateKey }: StepSignProps) {
       <GridItem h="10" colStart={1} colEnd={2}>
         <Input
           width={"100%"}
-          borderRadius={4}
-          backgroundColor={"#2C2E33"}
+          backgroundColor={"blackOpaque"}
           overflow={"hidden"}
           whiteSpace={"nowrap"}
           textOverflow={"ellipsis"}
+          borderRadius={4}
           placeholder={"Enter a secret message here"}
           border={"none"}
           onChange={(e) => setSecret(e.target.value)}

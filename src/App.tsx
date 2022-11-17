@@ -1,12 +1,11 @@
 import { Box, Tabs, TabPanel, TabPanels } from "@chakra-ui/react";
-import TabSteps from "./components/Steps/TabSteps";
+import StepsHeader from "./components/Steps/StepsHeader";
 import StepCreate from "./components/Steps/StepCreate";
 import StepResolve from "./components/Steps/StepResolve";
 import StepSign from "./components/Steps/StepSign";
 import { useState } from "react";
-// const ION = require("@decentralized-identity/ion-tools");
 
-function App() {
+const App = () => {
   const [status, setStatus] = useState<string[]>([]);
   const [did, setDid] = useState<string>("");
   const [didResolution, setDidResolution] = useState(null);
@@ -17,9 +16,17 @@ function App() {
   };
 
   return (
-    <Box m={"auto"} mt={12} p={12} border={"1px solid dimgray"} width={"700px"}>
+    <Box
+      m={"auto"}
+      mt={12}
+      p={12}
+      border={"1px solid"}
+      borderColor={"blackOpaque"}
+      width={"700px"}
+      borderRadius={4}
+    >
       <Tabs variant="unstyled">
-        <TabSteps status={status} />
+        <StepsHeader status={status} />
         <TabPanels>
           <TabPanel>
             <StepCreate
@@ -42,6 +49,6 @@ function App() {
       </Tabs>
     </Box>
   );
-}
+};
 
 export default App;

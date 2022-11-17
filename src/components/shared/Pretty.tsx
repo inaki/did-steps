@@ -1,6 +1,10 @@
 import JSONPretty from "react-json-pretty";
 
-const Pretty = ({ value }: { value: any }) => {
+type PrettyProps = {
+  value: Object | null;
+};
+
+const Pretty = ({ value }: PrettyProps) => {
   return (
     <JSONPretty
       theme={{

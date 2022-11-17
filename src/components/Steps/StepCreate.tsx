@@ -1,7 +1,6 @@
 import { Button, Box, Text, Icon, Flex } from "@chakra-ui/react";
 import { TbClipboard, TbClipboardCheck } from "react-icons/tb";
 import { useClipboard } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 const ION = require("@decentralized-identity/ion-tools");
 
 type StepCreateProps = {
@@ -50,7 +49,7 @@ function StepCreate({
 
   return (
     <Box>
-      <Button onClick={createDid} borderRadius={4} backgroundColor={"#AE3EC9"}>
+      <Button onClick={createDid} borderRadius={4} backgroundColor={"primary"}>
         Create New DID
       </Button>
       <Flex
@@ -64,7 +63,7 @@ function StepCreate({
           onClick={onCopy}
           as={hasCopied ? TbClipboardCheck : TbClipboard}
           alignSelf={"end"}
-          _hover={{ stroke: "gray" }}
+          _hover={{ stroke: "gray.600" }}
         />
         <Text overflowX={"scroll"} whiteSpace={"nowrap"} pb={1} px={2}>
           {value}

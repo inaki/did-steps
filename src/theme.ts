@@ -8,12 +8,14 @@ const tokens = {
       success: "green.100",
       background: "white",
       text: "black",
+      opaque: "#25262B",
     },
     dark: {
       primary: "#ae3ec9",
       success: "green.500",
       background: "#1A1B1E",
       text: "silver",
+      opaque: "#25262B",
     },
   },
 };
@@ -37,25 +39,18 @@ const semanticTokens = {
       default: tokens.colors.dark["text"],
       _light: tokens.colors.light["text"],
     },
+    blackOpaque: {
+      default: tokens.colors.dark["opaque"],
+      _light: tokens.colors.light["opaque"],
+    },
   },
 };
 
-//
 const styles = {
   global: {
     body: {
       background: "background",
       color: "text",
-    },
-  },
-};
-
-const components = {
-  Button: {
-    baseStyle: {
-      _focus: {
-        ring: "0px",
-      },
     },
   },
 };
@@ -69,7 +64,6 @@ const theme = extendTheme({
   config,
   tokens,
   styles,
-  components,
   semanticTokens,
 });
 
